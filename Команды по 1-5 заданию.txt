@@ -1,0 +1,80 @@
+1 задание
+
+a@a-VirtualBox:~$ cat > pets.txt
+кошки
+собаки     
+хомяки
+
+a@a-VirtualBox:~$ cat > PackAnimals.txt
+лошади
+верблюды
+ослы
+
+a@a-VirtualBox:~$ cat pets.txt
+кошки
+собаки
+хомяки
+
+a@a-VirtualBox:~$ cat pets.txt PackAnimals.txt > mix.txt
+a@a-VirtualBox:~$ ls
+Desktop    Downloads  Music            pets.txt  Public  Templates
+Documents  mix.txt    PackAnimals.txt  Pictures  snap    Videos
+
+a@a-VirtualBox:~$ cat mix.txt 
+кошки
+собаки
+хомяки
+лошади
+верблюды
+ослы
+
+a@a-VirtualBox:~$ mv mix.txt HumanFriends.txt
+a@a-VirtualBox:~$ ls
+Desktop    Downloads         Music            pets.txt  Public  Templates
+Documents  HumanFriends.txt  PackAnimals.txt  Pictures  snap    Videos
+
+Задание 2
+
+a@a-VirtualBox:~$ mkdir NewAnimals
+a@a-VirtualBox:~$ mv HumanFriends.txt NewAnimals/
+a@a-VirtualBox:~$ cd NewAnimals
+
+a@a-VirtualBox:~/NewAnimals$ ls
+HumanFriends.txt
+
+Задание 3
+	// не очень понял как выполнить поэтомиу сделал 2 раза 
+1 раз
+
+a@a-VirtualBox:~$ sudo apt update
+a@a-VirtualBox:~$ sudo apt install mysql-server
+
+2 раз
+
+a@a-VirtualBox:~$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.28-1_all.deb
+a@a-VirtualBox:~$ sudo dpkg -i mysql-apt-config_0.8.28-1_all.deb
+a@a-VirtualBox:~$ sudo apt update
+a@a-VirtualBox:~$ sudo apt install mysql-server
+@a-VirtualBox:~$ sudo systemctl status mysql
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset:>
+     Active: active (running) since Fri 2023-12-08 12:03:27 MSK; 17s ago
+       Docs: man:mysqld(8)
+             http://dev.mysql.com/doc/refman/en/using-systemd.html
+   Main PID: 7552 (mysqld)
+     Status: "Server is operational"
+      Tasks: 38 (limit: 2262)
+     Memory: 358.0M
+        CPU: 695ms
+     CGroup: /system.slice/mysql.service
+             └─7552 /usr/sbin/mysqld
+дек 08 12:03:26 a-VirtualBox systemd[1]: Starting MySQL Community Server...
+дек 08 12:03:27 a-VirtualBox systemd[1]: Started MySQL Community Server.
+
+Задание 4 
+
+a@a-VirtualBox:~$ cd Downloads/
+a@a-VirtualBox:~/Downloads$ sudo dpkg -i  code_1.85.0-1701902998_amd64.deb
+a@a-VirtualBox:~/Downloads$ cd
+a@a-VirtualBox:~$ dpkg --list
+a@a-VirtualBox:~$ sudo dpkg --purge code
