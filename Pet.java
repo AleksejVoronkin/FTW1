@@ -6,4 +6,3 @@ public class Pet extends Animal {
         super(name, birthDate, commands);
     }
 }
-//// проверка для ветки
