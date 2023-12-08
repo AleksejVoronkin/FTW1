@@ -5,4 +5,7 @@ public class Pet extends Animal {
     public Pet(String name, LocalDate birthDate, List<String> commands) {
         super(name, birthDate, commands);
     }
+    public String getCategory() {
+        return "Pet";
+    }
 }
